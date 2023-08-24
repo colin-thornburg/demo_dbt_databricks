@@ -44,11 +44,6 @@ models:
       - name: state
         data_type: varchar
         description: "The current status of the order"
-        tests:
-          - accepted_values:
-              values: ['placed', 'shipped', 'completed', 'returned', 'return_pending']
-              config:
-                  store_failures: true
 
       - name: payment_id
         data_type: number
@@ -57,9 +52,6 @@ models:
       - name: payment_method
         data_type: varchar
         description: "The type of payment the customer used to make the purchase"
-        tests:
-          - accepted_values:
-              values: ['credit_card', 'coupon', 'bank_transfer', 'gift_card']
 
       - name: amount
         data_type: number

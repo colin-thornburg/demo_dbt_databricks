@@ -18,23 +18,23 @@ models:
         owner: 'Danny the Data Engineer'
     columns:
       - name: order_id
-        data_type: number
+        data_type: bigint
         constraints:
           - type: not_null
         description: "The unique order identifier"
 
       - name: customer_id
-        data_type: number
+        data_type: bigint
         constraints:
           - type: not_null
         description: "The unique customer identifier"
 
       - name: first_name
-        data_type: varchar
+        data_type: string
         description: "The first name of the customer"
 
       - name: last_name
-        data_type: varchar
+        data_type: string
         description: "The last name initial of the customer"
 
       - name: order_date
@@ -42,19 +42,19 @@ models:
         description: "The first date an order was placed"
 
       - name: state
-        data_type: varchar
+        data_type: string
         description: "The current status of the order"
 
       - name: payment_id
-        data_type: number
+        data_type: bigint
         description: "The unique payment identifier"
 
       - name: payment_method
-        data_type: varchar
+        data_type: string
         description: "The type of payment the customer used to make the purchase"
 
       - name: amount
-        data_type: number
+        data_type: double
         description: "Amount in USD"
 
       - name: created_at

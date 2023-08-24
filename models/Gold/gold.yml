@@ -73,7 +73,7 @@ exposures:
  - name: order_analytics_exposure
    type: dashboard # required
    maturity: high # optional
-   url: https://10ax.online.tableau.com/#/site/dbtcolintdev885935/views/JaffleShop/OrderAnalyticsDBX?:iid=1 # optional
+   url: https://10ax.online.tableau.com/#/site/dbtcolintdev885935/views/JaffleShop/OrderAnalyticsDBX # optional
    description: > # optional
      This is a dashboard for order analytics.
    

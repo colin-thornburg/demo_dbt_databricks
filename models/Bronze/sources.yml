@@ -10,7 +10,7 @@ sources:
         freshness:
           warn_after: {count: 6000, period: day}
           error_after: {count: 12000, period: day}
-        loaded_at_field: order_date
+        loaded_at_field: loaded_at
 
   - name: stripe
     database: colint_raw
@@ -20,4 +20,4 @@ sources:
         freshness:
           warn_after: {count: 12000, period: day}
           error_after: {count: 24000, period: day}
-        loaded_at_field: created
+        loaded_at_field: temp_timestamp

@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: colint_raw
+    schema: retail
+    tables:
+      - name: jaffle_shop_customers
+      - name: jaffle_shop_orders
+        freshness:
+          warn_after: {count: 6000, period: day}
+          error_after: {count: 12000, period: day}
+        loaded_at_field: order_date
+
+  - name: stripe
+    database: colint_raw
+    schema: retail
+    tables:
+      - name: stripe_payments
+        freshness:
+          warn_after: {count: 12000, period: day}
+          error_after: {count: 24000, period: day}
+        loaded_at_field: created
